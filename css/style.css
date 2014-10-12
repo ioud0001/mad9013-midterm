@@ -10,7 +10,6 @@
 body{
 	font-size: 100%;	
   /** you can set this as 100% if you want **/
-	background-color: #4CC0FF;
 }
 h1, h2, h3{
 	font-weight: 700;	
@@ -163,14 +162,25 @@ ul.navbar{
 	background-color: #00527F;
 }
 @media all and (min-width: 1081px){
+	.wrapper{
+		width: 95%;
+	}
 	.navbar, h2{
-		display: inline;
-		width: 10%;
+		display: inline !important;
+		width: 5%;
+		
+	}
+	.navbar li{
+		display: block !important;
 	}
 	.main, .two, .three{
 		display: inline;
 		float: left;
 
+	}
+	.navbar{
+		width: 10%;
+		float: left;
 	}
 	.main{
 		width: 50%;
@@ -181,6 +191,21 @@ ul.navbar{
 	.two h3, .three h3{
 		background-color: #4CC0FF;
 		color: #00527F;
+	}
+	.navbar a, .navbar li a:active, .navbar li a:visited{
+		background-color: transparent !important;
+		padding: auto;
+		text-align: justify;
+		color: white;
+	}
+	.navbar li a:hover{
+		/*background-color: #0084CC !important;*/
+		color:  #0084CC;
+		background-color: #E8CD8B;
+		font-weight: 800;
+	}
+	.navbar{
+		background-color: #00A5FF;
 	}
 }
 
@@ -244,6 +269,7 @@ ul.navbar{
 {
 	.navbar li{
 		margin: 0;
+		width: 100%;
 	}
 	.wrapper{
 		width: 100%;

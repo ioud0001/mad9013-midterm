@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box; /* starting point from now on */
+}	
+body{
+	font-size: 100%;	
+  /** you can set this as 100% if you want **/
+	background-color: #4CC0FF;
+}
+h1, h2, h3{
+	font-weight: 700;	
+	padding: 10px 20px;
+	color: #000;
+}
+h1{
+	font-size: 3.6rem;	
+	font-family: cursive;
+}
+h2{
+	font-size: 3.0rem;	
+	font-family: 'Lobster', serif;
+}
+h3{
+	font-size: 2.4rem;
+	font-family: serif;
+	color: #494949;	
+}
+h3:nth-child(2n), h3:nth-child(3n){
+	color: #32647F !important;	
+}
+p, li, a{
+	font-weight: 400;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #555;		
+}
+p{
+	padding: 10px 20px;
+	font-size: 1.4rem;
+}
+li{
+	font-size: 1.4rem;
+}
+ol li{
+	padding: 6px 20px;
+	margin-left: 20px;
+	list-style-position:inside;
+}
+a{
+	font-size: 1.4rem;
+}	
+
+/***********************************
+					Layout
+***********************************/
+.wrapper{
+	background-color: #fff;	
+	box-shadow: 0px 2px 50px rgba(0, 82, 27, 0.5);
+	width: 85%;
+}
+.masthead{
+	
+}
+.nav{
+	
+}
+.navbar{
+	
+}
+.main{
+	
+}
+.sidebar{
+	
+}
+.footer{
+	
+}
+/***********************************
+					Masthead
+***********************************/
+.masthead h1{
+	padding: 30px 20px;
+	background-color: #00527F;
+	color: white;
+}
+
+/***********************************
+					Navigation
+***********************************/
+ul.navbar{
+	display: inline;
+	
+}
+.navbar li{
+	/*float:left;	*/
+	  /* 960/4 = 240  works if the layout is 960*/
+	list-style:none;
+	display: inline;
+}
+.navbar{
+	/*display: inline;*/
+	width: 100%;
+	
+}
+.navbar a{	
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+	background-color: #6CD1F5;
+	font-family: 'Shadows Into Light', sans-serif;
+}
+.navbar a:visited,
+.navbar a:active,
+.navbar a:focus{
+	color: #fff;
+	background-color: #00A5FF;
+}
+
+.navbar a:hover{
+	background-color: #0084CC;
+	color: #fff;
+	
+}
+/***********************************
+					Content
+***********************************/
+.sidebar p{
+	font-size: 1.4rem;	
+}
+.instructions{
+	color: #C30;	
+}
+
+.main{
+	border-left-color: #00A5FF;
+	border-bottom-color: #00A5FF;
+	border-top-color: #00A5FF;
+	border-right-color: white;
+	border-style: solid;
+	border-width: medium;
+}
+.two, .three{
+	border: 1px #00A5FF solid;
+}
+/***********************************
+					Footer
+***********************************/
+.footer p{
+	padding: 20px 20px;
+	font-size: 1.2rem;
+	color: #4CC0FF;	
+	background-color: #00527F;
+	clear: both;
+}
+
+.masthead{
+	background-color: #00527F;
+}
+@media all and (min-width: 1081px){
+	.navbar, h2{
+		display: inline;
+		width: 10%;
+	}
+	.main, .two, .three{
+		display: inline;
+		float: left;
+
+	}
+	.main{
+		width: 50%;
+	}
+	.two, .three{
+		width: 20%;
+	}
+	.two h3, .three h3{
+		background-color: #4CC0FF;
+		color: #00527F;
+	}
+}
+
+@media all and (max-width: 1080px) and (min-width: 720px){
+	.navbar{
+		display: block;
+	}
+	
+	.main, .two, .three{
+		display: inline;
+		float: left;
+		width: 30%;
+		
+	}
+	.main{
+		border-left-color: #00A5FF;
+		border-bottom-color: #00A5FF;
+		border-top-color: #00A5FF;
+		border-right-color: white;
+		border-style: solid;
+		border-width: medium;
+	}
+	.two{
+		border-left-color: #00A5FF;
+		border-bottom-color: #00A5FF;
+		border-top-color: #00A5FF;
+		border-right-color: #00A5FF;
+		border-style: solid;
+		border-width: medium;
+	}
+	.three{
+		border-left-color: white;
+		border-bottom-color: #00A5FF;
+		border-top-color: #00A5FF;
+		border-right-color: #00A5FF;
+		border-style: solid;
+		border-width: medium;
+	}
+}
+
+@media all and (max-width: 719px) and (min-width: 500px){
+	.wrapper{
+		width: 100%;
+	}
+	.navbar{
+		width: auto;
+	}
+	.main{
+		display: block;
+		border: none;
+	}
+	
+	.two, .three{
+		display: inline;
+		float: left;
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 499px)
+{
+	.navbar li{
+		margin: 0;
+	}
+	.wrapper{
+		width: 100%;
+	}
+	.main, .two, .three{
+		display: block;
+		border: none;
+		
+	}
+	.navbar li:nth-child(2n){
+		background-color: #D81316;
+	}
+}
